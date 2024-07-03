@@ -26,7 +26,9 @@
         rating: +rating,
         text
       }
+      
       FeedbackStore.update((currentFeedback) => [newFeedback, ...currentFeedback])
+
       text = '';
     }
   }
@@ -34,7 +36,7 @@
 
 <Card>
   <header>
-    <h2>How would you rate your service with us?</h2>  
+    <h2>Rate your service with us?</h2>  
     <form on:submit|preventDefault={handleSubmit} method="post">
       <RatingSelect on:rating-select={handleSelect} />
       <div class="input-group">
