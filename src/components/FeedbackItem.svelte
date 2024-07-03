@@ -1,12 +1,11 @@
 <script>
-  import {createEventDispatcher} from 'svelte';
+  import {FeedbackStore} from '../stores'
   import Card from './Card.svelte'
   export let item
-
-  const dispatch = createEventDispatcher()
-
   const handleDelete = (itemId) => {
-    dispatch('delete-feedback', itemId)
+    FeedbackStore.update((currentFeedback) => { 
+      return currentFeedback.filter((item) => item.id !== itemId) 
+    })
   }
 </script>
 
@@ -16,16 +15,15 @@
   <p class="text-display">{item.text}</p>
 </Card>
 
-<style>
-  
+<style>  
   .num-display {
     position: absolute;
     top: -10px;
     left: -10px;
     width: 50px;
     height: 50px;
-    background: #ff6a95;
-    color: #fff;
+    background: #7edd47;
+    color: #323335;
     border: 1px #eee solid;
     border-radius: 50%;
     padding: 10px;

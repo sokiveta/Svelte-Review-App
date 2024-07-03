@@ -8,24 +8,22 @@
   <slot></slot>
 </button>
 
-
 <style>
   button {
-    color: #fff;
     border: 0;
     border-radius: 8px;
-    color: #fff;
+    color: #323335;
     width: 100px;
     height: 40px;
     cursor: pointer;
   }
 
   .primary {
-    background-color: #202142;
+    background-color: #7edd47;
   }
 
   .secondary {
-    background: #ff6a95;
+    background: #7edd47;
   }
 
   button:hover {
